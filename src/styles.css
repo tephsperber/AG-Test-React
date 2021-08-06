@@ -1,0 +1,45 @@
+h1 {
+  font-size: 30px;
+  color: black;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin: 0px;
+  opacity: 70%;
+  background-color: #a3e1e4;
+}
+
+.menu {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-box-shadow: inset 0.3em 0.3em 1em rgba(0, 0, 0, 0.3),
+    0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white;
+  box-shadow: inset 0.3em 0.3em 1em rgba(0, 0, 0, 0.3),
+    0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  font-size: 20px;
+  letter-spacing: 3px;
+  width: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+.nav-link:hover {
+  background-color: #a3e1e4;
+  color: white;
+  padding: 5px;
+}
