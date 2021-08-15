@@ -5,6 +5,7 @@ import "./App.css";
 
 //Import components
 import NavBar from "./components/NavBar/NavBar";
+import ItemCount from "./components/ItemCount/ItemCount";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import CardComponent from "./components/CardComponent/CardComponent";
 import Footer from "./components/Footer/Footer";
@@ -15,17 +16,18 @@ import Foto2 from "./components/CardComponent/foto2.jpeg";
 import Foto3 from "./components/CardComponent/foto3.jpeg";
 
 class App extends React.Component {
+  
   render() {
     return (
       <div className="App">
         <NavBar title="Resultados en el día" />
-
+<div> 
+  <ItemCount></ItemCount>
+</div>
         <div className="List-Container">
-          <ItemListContainer 
-          greeting="Estudios de COVID-19"/>
-          <ItemListContainer greeting="Enfermeros a domicilio en CABA y GBA"/>
+          <ItemListContainer greeting="Estudios de COVID-19" />
+          <ItemListContainer greeting="Enfermeros a domicilio en CABA y GBA" />
         </div>
-
         <div className="Cards-Container">
           <CardComponent
             titleCard="Resultados"
