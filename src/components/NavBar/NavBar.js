@@ -6,11 +6,11 @@ import "./NavBar.css";
 //Import image - Logo
 import Logo from "./logo.png";
 
-const NavBar = ({ title }) => {
+const NavBar = () => {
   return (
     <header>
       <img src={Logo} className="logo" alt="Logo" />
-      <h1 className="tituloHeader">{title}</h1>
+      <h1 className="tituloHeader">Resultados en el día</h1>
       <nav>
         <div className="menu">
           <ul>
@@ -25,7 +25,6 @@ const NavBar = ({ title }) => {
               </a>
             </li>
             <li>
-              <i className="fas fa-shopping-cart"></i>
               <a className="nav-link" href="precios.html">
                 Precios
               </a>

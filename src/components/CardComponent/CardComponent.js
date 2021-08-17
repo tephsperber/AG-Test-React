@@ -1,6 +1,6 @@
 import React from "react";
 
-//Import Card, Icon 
+//Import Card, Icon and Image
 import { Card, Icon, Image } from "semantic-ui-react";
 
 //Import css
@@ -13,7 +13,7 @@ const CardComponent = ({ img, titleCard, tests, description }) => (
       <Card.Header>{titleCard}</Card.Header>
 
       <Card.Meta>
-        <span className="tests">{tests}</span>
+        <span>{tests}</span>
       </Card.Meta>
 
       <Card.Description>{description}</Card.Description>

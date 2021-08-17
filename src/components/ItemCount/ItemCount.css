@@ -1,6 +1,43 @@
 .itemCount {
-font-size: 15px; 
-color: black;
-margin: 20px;
+  width: auto;
+  padding: 20px;
+float: right;  
+letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #f1ebeb;
+
 }
-  
+
+.iconCart {
+  padding-bottom: 40px;
+}
+
+.initialNumber {
+  font-size: 20px;
+  color: #11a99d;
+  font-weight: bold;
+  display: inline;
+  padding: 20px;
+}
+
+.stockText {
+font-size: 10px;
+}
+
+.stockNumber {
+    color: #11a99d;
+    font-weight: bold;
+    padding: 10px;
+
+}
+.button {
+    padding-bottom: 20px;
+    padding-top: 10px;
+
+}
+.buttonAdd {
+  padding-bottom: 20px;
+  padding-top: 10px;
+
+}

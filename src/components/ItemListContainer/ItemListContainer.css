@@ -1,0 +1,20 @@
+.itemListContainer {
+  float: left;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+
+.Cards-Container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: auto;
+  width: 100%;
+  margin-top: 20px;
+
+}

@@ -1,41 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 
 //Import CSS
 import "./ItemCount.css";
 
-//Import Icon
-import { Button } from "semantic-ui-react";
+//Import Button and Icon
+import { Button, Icon } from "semantic-ui-react";
 
-const ItemCount = () => {
-
-  //Definimos la cantidad seleccionada por el usuario
-  const [initial, setInitial] = React.useState(0);
-
+function ItemCount({ stockTests, initialTests, onAddTests }) {
   //Definimos el stock de tests diarios
-  const [stock, setStock] = React.useState(10);
+  const [stock, setStock] = useState( stockTests );
 
+  //Definimos la cantidad de 1 tipo de test seleccionado por el usuario
+  const [initial, setInitial] = useState( initialTests );
+
+  //Definimos el onAdd
+  const [onAdd, setOnAdd] = useState( onAddTests );
+
+  //Definimos una funcion para que al apretar el botón de sumar, la variable initial aumente
   const handleIncrement = () => {
-    setInitial(initial + 1);
+    //Establecemos un if para que cuando aumente el Initial, baje el stock
+    if (stock > 0) {
+      setInitial(initial + 1);
+      setStock(stock - 1);
+    }
   };
 
+  //Definimos una funcion para que al apretar el botón de restar, la variable initial disminuya
   const handleDecrement = () => {
-    setInitial(initial - 1);
+    //Establecemos un if para que cuando disminuya el Initial, suba el stock
+    if ((stock >= 0) && (stock < 20)) {
+      setInitial(initial - 1);
+      setStock(stock + 1);
+    }
   };
 
-  const changeStock = () => {
-    setStock(stock - initial);
-  };
-  
-  
+     //Definimos una funcion para agregar al carrito con onAdd
+     const handleOnAdd = () => {
+      setOnAdd(onAdd);
+      console.log ("Has agregado productos al carrito");
+  }
+
   return (
     <div className="itemCount">
-      <p className="cart">Carrito</p>
-      <p>{initial}</p>
-      <Button onClick={handleIncrement}> + </Button>
-      <Button onClick={handleDecrement}> - </Button>
-      <p onChange={changeStock}>{stock}</p>
+      <Icon name="cart" size="big" className="iconCart" />
+      <div className="button">
+        <Button onClick={handleDecrement}> - </Button>
+        <p className="initialNumber"> {initial}</p>
+        <Button color="teal" onClick={handleIncrement}> + </Button>
+      </div>
+      <div className="buttonAdd">
+        <Button onClick={handleOnAdd}> Agregar al Carrito </Button>
+      </div>
+      <p className="stockText">
+        Quedan disponibles<span className="stockNumber"> {stock} </span>tests
+      </p>
     </div>
   );
-};
-
+}
 export default ItemCount;

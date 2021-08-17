@@ -2,22 +2,3 @@
   display: flex;
   flex-direction: column;
 }
-.Cards-Container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: auto;
-  width: 100%;
-  margin-top: 20px;
-
-}
-.List-Container {
-border: 2px solid black;
-width: 600px;
-margin: auto;
-padding: 20px;
-margin-top: 20px;
-letter-spacing: 5px;
-text-align: center;
-text-transform: uppercase;
-}
