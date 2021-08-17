@@ -23,7 +23,7 @@ const ItemListContainer = ({ greeting }) => (
       <List.Item>{greeting}</List.Item>
     </div>
     <div>
-      <ItemCount stockTests={20} initialTests={0} onAddTests={0} />
+      <ItemCount stock={20} initial={0} onAdd={count =>console.log ("Agregaste", count, "productos al carrito")} />
     </div>
   </List>
   
