@@ -8,16 +8,14 @@ import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Footer from "./components/Footer/Footer";
 
-
 class App extends React.Component {
-  
   render() {
     return (
       <div className="App">
-        <NavBar/>
-          <ItemListContainer greeting="Estudios de COVID-19" />
+        <NavBar />
+        <ItemListContainer />
         <Footer />
-        </div>
+      </div>
     );
   }
 }

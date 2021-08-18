@@ -1,0 +1,30 @@
+.img {
+padding-top: 10px;
+}
+
+.card {
+  height: 100%;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+}
+
+.centerText {
+  text-align: center;
+  border-bottom: 2px solid lightgrey;
+  padding: 20px;
+
+}
+
+.precio {
+font-size: 25px;
+font-weight: bold;
+color: black;
+padding-top: 20px;
+}
+
+.cardHeader {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  }

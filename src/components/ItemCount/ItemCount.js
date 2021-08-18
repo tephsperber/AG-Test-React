@@ -26,16 +26,18 @@ function ItemCount({ stock, initial, onAdd }) {
       }
     };
 
+    
   return (
     <div className="itemCount">
-      <Icon name="cart" size="big" className="iconCart" />
       <div className="button">
         <Button onClick={handleDecrement}> - </Button>
         <p className="initialNumber"> {count}</p>
-        <Button color="teal" onClick={handleIncrement}> + </Button>
+        <Button onClick={handleIncrement}> + </Button>
       </div>
       <div className="buttonAdd">
-        <Button onClick={()=> onAdd (count)}> Agregar al Carrito </Button>
+        <Button onClick={()=> onAdd (count)}> Agregar al       
+        <Icon name="cart" color="teal" size="large" className="iconCart" />
+ </Button>
       </div>
       <p className="stockText">
         Quedan disponibles<span className="stockNumber"> {stock - count} </span>tests

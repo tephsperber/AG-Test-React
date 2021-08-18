@@ -1,16 +1,13 @@
 .itemCount {
   width: auto;
-  padding: 20px;
-float: right;  
 letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase;
-  background-color: #f1ebeb;
-
 }
 
 .iconCart {
-  padding-bottom: 40px;
+  padding-left: 10px;
+  
 }
 
 .initialNumber {
@@ -22,13 +19,14 @@ letter-spacing: 5px;
 }
 
 .stockText {
-font-size: 10px;
+font-size: 8px;
+padding-bottom: 5px;
+
 }
 
 .stockNumber {
     color: #11a99d;
     font-weight: bold;
-    padding: 10px;
 
 }
 .button {
@@ -38,6 +36,5 @@ font-size: 10px;
 }
 .buttonAdd {
   padding-bottom: 20px;
-  padding-top: 10px;
 
 }
