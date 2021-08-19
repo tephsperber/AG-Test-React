@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 //Import Component
 import { ItemList } from "../ItemList/ItemList";
@@ -8,8 +8,11 @@ import Foto1 from "./foto1.png";
 import Foto2 from "./foto2.jpeg";
 import Foto3 from "./foto3.jpeg";
 
+
 const ItemListContainer = () => {
 const [productos, setProductos] = useState([]);
+
+  
 const myPromise = new Promise ((resolve, reject) => {
   setTimeout(() => {
       const productos = [
@@ -29,6 +32,7 @@ const myPromise = new Promise ((resolve, reject) => {
       return (
 <ItemList productos={productos}
     />
-);
-}
+    
+      )}
+
 export default ItemListContainer;
