@@ -25,7 +25,7 @@ export const Item = ({ producto }) => {
         </div>
         <div>
           <ItemCount
-            stock={20}
+            stock={producto.stock}
             initial={0}
             onAdd={(count) =>
               console.log("Agregaste", count, "productos al carrito")
