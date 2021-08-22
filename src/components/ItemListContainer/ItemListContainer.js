@@ -3,10 +3,13 @@ import React, { useState } from "react";
 //Import Component
 import { ItemList } from "../ItemList/ItemList";
 
+//Import css
+import "./ItemListContainer.css";
+
 //Import images
 import Foto1 from "./foto1.png";
 import Foto2 from "./foto2.jpeg";
-import Foto3 from "./foto3.jpeg";
+import Foto3 from "./foto4.jpeg";
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
@@ -69,7 +72,11 @@ const ItemListContainer = () => {
   myPromise.then((productos) => {
     setProductos(productos);
   });
-  return <ItemList productos={productos} />;
+  return (
+    <div className="itemListContainer">
+      <ItemList productos={productos} />
+    </div>
+  );
 };
 
 export default ItemListContainer;

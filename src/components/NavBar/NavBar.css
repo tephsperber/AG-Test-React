@@ -11,7 +11,6 @@ h1 {
 
 .tituloHeader {
   font-size: 20px;
-
 }
 
 .logo {
@@ -45,12 +44,12 @@ li {
   text-transform: uppercase;
   color: black;
   display: inline;
-  padding-left: 5px;
+  padding-left: 40px;
   padding-right: 20px;
+  font-weight: bold;
 }
 
 .nav-link:hover {
-  font-weight: bold;
+  color: #11a99d;
   text-decoration: underline;
-  color: black;
 }

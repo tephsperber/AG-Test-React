@@ -1,0 +1,53 @@
+.itemDetail {
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin: 40px;
+  -webkit-box-shadow: inset 0.3em 0.3em 1em rgba(0, 0, 0, 0.3),
+    0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white;
+  box-shadow: inset 0.3em 0.3em 1em rgba(0, 0, 0, 0.3),
+    0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white;
+  padding: 30px;
+}
+
+.centerItem {
+  display: flex;
+  justify-content: center;
+}
+
+.imgItem {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+}
+
+.cardHeaderItem {
+  text-align: center;
+  padding: 30px;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #11a99d;
+  font-weight: bold;
+}
+.cardDescriptionItem {
+  text-align: left;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.cardPriceItem {
+  padding-top: 20px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+.textPrice {
+  border: 5px solid lightgrey;
+  width: auto;
+  padding: 20px;
+}
+
+.spanItem {
+  text-decoration: underline;
+  font-weight: bold;
+}

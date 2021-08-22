@@ -1,13 +1,12 @@
 .itemCount {
   width: auto;
-letter-spacing: 5px;
+  letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase;
 }
 
 .iconCart {
   padding-left: 10px;
-  
 }
 
 .initialNumber {
@@ -19,22 +18,18 @@ letter-spacing: 5px;
 }
 
 .stockText {
-font-size: 8px;
-padding-bottom: 5px;
-
+  font-size: 8px;
+  padding-bottom: 5px;
 }
 
 .stockNumber {
-    color: #11a99d;
-    font-weight: bold;
-
+  color: #11a99d;
+  font-weight: bold;
 }
 .button {
-    padding-bottom: 20px;
-    padding-top: 10px;
-
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 .buttonAdd {
   padding-bottom: 20px;
-
 }

@@ -11,17 +11,17 @@ import ItemCount from "../ItemCount/ItemCount";
 
 export const Item = ({ producto }) => {
   return (
-    <div className="card" >
+    <div className="card">
       <Card>
-      <div className="centerText">
-        <Card.Content>
+        <div className="centerText">
+          <Card.Content>
             <Card.Header className="cardHeader">{producto.title}</Card.Header>
-            <Card.Meta >{producto.description}</Card.Meta>
-          <Image className="img" src={producto.picture} />
-          <div className="precio">
-            <Card.Description>${producto.price}</Card.Description>
+            <Card.Meta>{producto.description}</Card.Meta>
+            <Image className="img" src={producto.picture} />
+            <div className="precio">
+              <Card.Description>${producto.price}</Card.Description>
             </div>
-        </Card.Content>
+          </Card.Content>
         </div>
         <div>
           <ItemCount
@@ -33,7 +33,6 @@ export const Item = ({ producto }) => {
           />
         </div>
       </Card>
-
     </div>
   );
 };

@@ -6,6 +6,7 @@ import "./App.css";
 //Import components
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Footer from "./components/Footer/Footer";
 
 class App extends React.Component {
@@ -14,6 +15,7 @@ class App extends React.Component {
       <div className="App">
         <NavBar />
         <ItemListContainer />
+        <ItemDetailContainer />
         <Footer />
       </div>
     );
