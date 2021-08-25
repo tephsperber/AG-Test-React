@@ -1,17 +1,16 @@
 import React from "react";
 
-//Import Card and Image
+//Import Card, Image and Link
 import { Card, Image } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 //Import css
 import "./Item.css";
 
-//Import Component
-import ItemCount from "../ItemCount/ItemCount";
-
 export const Item = ({ producto }) => {
   return (
-    <div className="card">
+    <Link to={`/detail/${producto.id}`}>
+       <div className="card">
       <Card>
         <div className="centerText">
           <Card.Content>
@@ -23,16 +22,9 @@ export const Item = ({ producto }) => {
             </div>
           </Card.Content>
         </div>
-        <div>
-          <ItemCount
-            stock={producto.stock}
-            initial={0}
-            onAdd={(count) =>
-              console.log("Agregaste", count, "productos al carrito")
-            }
-          />
-        </div>
       </Card>
     </div>
+    </Link>
+
   );
 };

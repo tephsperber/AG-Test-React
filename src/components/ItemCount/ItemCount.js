@@ -4,7 +4,10 @@ import React, { useState } from "react";
 import "./ItemCount.css";
 
 //Import Button and Icon
-import { Button, Icon } from "semantic-ui-react";
+import { Button } from "semantic-ui-react";
+
+//Import Component
+import CartWidget from "../CartWidget/CartWidget";
 
 function ItemCount({ stock, initial, onAdd }) {
   const [count, setCount] = useState(initial);
@@ -34,9 +37,8 @@ function ItemCount({ stock, initial, onAdd }) {
       </div>
       <div className="buttonAdd">
         <Button onClick={() => onAdd(count)}>
-          {" "}
           Agregar al
-          <Icon name="cart" color="teal" size="large" className="iconCart" />
+          <CartWidget />
         </Button>
       </div>
       <p className="stockText">

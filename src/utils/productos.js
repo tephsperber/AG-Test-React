@@ -1,0 +1,58 @@
+const productosArray = [
+  {
+    id: 1,
+    category: "CABA",
+    title: "PCR CABA",
+    description: "Test PCR CABA",
+    price: 7000,
+    picture: "img/foto1.png",
+    stock: 20,
+  },
+  {
+    id: 2,
+    category: "GBA",
+    title: "PCR GBA",
+    description: "Test PCR GBA",
+    price: 8000,
+    picture: "img/foto1.png",
+    stock: 10,
+  },
+  {
+    id: 3,
+    category: "CABA",
+    title: "Antígenos CABA",
+    description: "Test Antigenos CABA",
+    price: 4000,
+    picture: "img/foto2.jpeg",
+    stock: 30,
+  },
+  {
+    id: 4,
+    category: "GBA",
+    title: "Antígenos GBA",
+    description: "Test Antigenos GBA",
+    price: 5000,
+    picture: "img/foto2.jpeg",
+    stock: 20,
+  },
+  {
+    id: 5,
+    category: "CABA",
+    title: "Anticuerpos CABA",
+    description: "Test Anticuerpos CABA",
+    price: 4000,
+    picture: "img/foto3.jpeg",
+    stock: 25,
+  },
+  {
+    id: 6,
+    category: "GBA",
+    title: "Anticuerpos GBA",
+    description: "Test Anticuerpos GBA",
+    price: 5000,
+    picture: "img/foto3.jpeg",
+    stock: 15,
+  },
+];
+
+export default productosArray;
