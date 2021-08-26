@@ -1,0 +1,17 @@
+h1 {
+  font-size: 50px;
+  color: black;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 20%;
+  margin: 20px;
+}
+
+.viewsText {
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}

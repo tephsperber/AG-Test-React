@@ -1,14 +1,8 @@
-import React from 'react'
+import React from "react";
+import ItemDetailContainer from "../../components/ItemDetailContainer/ItemDetailContainer";
 
-const detail = ({match}) => {
-console.log("match", match);
+const detail = () => {
+  return <ItemDetailContainer />;
+};
 
-let productoID = match.params.id;
-return (
-        <div>
-            {productoID}
-        </div>
-    )
-}
-
-export default detail
+export default detail;

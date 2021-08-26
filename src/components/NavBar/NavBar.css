@@ -1,4 +1,5 @@
-h1 {
+.tituloHeader {
+  font-size: 20px;
   color: black;
   letter-spacing: 5px;
   text-align: center;
@@ -7,10 +8,6 @@ h1 {
   display: inline;
   float: right;
   width: 300px;
-}
-
-.tituloHeader {
-  font-size: 20px;
 }
 
 .logo {
@@ -51,5 +48,29 @@ li {
 
 .nav-link:hover {
   color: #11a99d;
+  text-decoration: underline;
+}
+
+.cartWidgetNav {
+  text-align: center;
+  float: right;
+  margin-right: 10px;
+  display: inline;
+}
+
+.category {
+  float: left;
+  -webkit-box-shadow: inset 0.3em 0.3em 1em rgba(0, 0, 0, 0.3),
+    0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white;
+  box-shadow: inset 0.3em 0.3em 1em rgba(0, 0, 0, 0.3),
+    0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white;
+  padding: 10px;
+  margin: 10px;
+}
+
+.titleCategory {
+  text-align: center;
+  display: inline;
+  color: black;
   text-decoration: underline;
 }

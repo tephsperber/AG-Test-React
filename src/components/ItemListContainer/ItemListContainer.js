@@ -1,13 +1,8 @@
 import React, { useState, useEffect } from "react";
-
-//Import Component
 import { ItemList } from "../ItemList/ItemList";
-
-//Import css
 import "./ItemListContainer.css";
-
 import { useParams } from "react-router-dom";
-import productosArray from "../../utils/productos";
+import productsArray from "../../utils/products";
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
@@ -17,18 +12,20 @@ const ItemListContainer = () => {
     const myPromise = new Promise((resolve, reject) => {
       setTimeout(() => {
         categoryId
-          ? resolve(productosArray.filter((e) => e.category === categoryId))
-          : resolve(productosArray);
+          ? resolve(
+              productsArray.filter((product) => product.category === categoryId)
+            )
+          : resolve(productsArray);
       }, 2000);
     });
-    myPromise.then((productosArray) => {
-      setProductos(productosArray);
+
+    myPromise.then((productsArray) => {
+      setProductos(productsArray);
     });
   }, [categoryId]);
 
   return (
     <div>
-      <h4>{categoryId}</h4>
       <div className="itemListContainer">
         <ItemList productos={productos} />
       </div>

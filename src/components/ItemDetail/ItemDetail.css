@@ -11,14 +11,21 @@
 }
 
 .centerItem {
-  display: flex;
+  display: grid;
   justify-content: center;
 }
 
 .imgItem {
   display: flex;
   justify-content: center;
-  height: 300px;
+  height: auto;
+  float: left;
+}
+
+.cardItemDetail {
+  justify-content: center;
+  height: auto;
+  float: right;
 }
 
 .cardHeaderItem {
@@ -49,5 +56,9 @@
 
 .spanItem {
   text-decoration: underline;
+  font-weight: bold;
+}
+
+.itemCount {
   font-weight: bold;
 }

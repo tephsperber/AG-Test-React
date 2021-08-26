@@ -1,12 +1,8 @@
-import React from 'react'
-
-//Import Component
+import React from "react";
+import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
 
 const inicio = () => {
-    return (<div>
-</div>
-    );
-  };
-  
-  export default inicio;
-  
+  return <ItemListContainer />;
+};
+
+export default inicio;

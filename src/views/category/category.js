@@ -1,15 +1,8 @@
-import React from 'react'
+import React from "react";
+import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
 
-const category = ({match}) => {
-    console.log("match", match);
-    
-    let productoID = match.params.id;
+const category = () => {
+  return <ItemListContainer />;
+};
 
-return (
-        <div>
-            {productoID}
-        </div>
-    )
-}
-
-export default category
+export default category;
