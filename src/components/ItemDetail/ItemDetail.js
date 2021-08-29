@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ItemDetail.css";
-import { Card } from "semantic-ui-react";
+import { Card, Button } from "semantic-ui-react";
 import ItemCount from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
 
 export function ItemDetail({ items }) {
+  const [onAdd, setOnAdd] = useState(0);
+
+  const onAddClickDetail = (quantityToAdd) => {
+    setOnAdd(quantityToAdd);
+  };
+
   return (
     <div className="centerItem">
       <div className="itemDetail">
@@ -28,13 +35,16 @@ export function ItemDetail({ items }) {
         </div>
       </div>
       <div className="itemCount">
-        <ItemCount
-          stock={items.stock}
-          initial={0}
-          onAdd={(count) =>
-            console.log("Agregaste", count, "productos al carrito")
-          }
-        />
+        {onAdd ? (
+          <div>
+            <p> Has agregado {onAdd} test al carrito</p>
+            <Link to="/cart">
+              <Button>Termina tu compra</Button>
+            </Link>
+          </div>
+        ) : (
+          <ItemCount stock={items.stock} initial={1} onAdd={onAddClickDetail} />
+        )}
       </div>
     </div>
   );

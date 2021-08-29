@@ -18,15 +18,19 @@ function ItemCount({ stock, initial, onAdd }) {
     }
   };
 
+  const onAddClickCount = () => {
+    onAdd(count);
+  };
+
   return (
     <div className="itemCount">
       <div className="button">
         <Button onClick={handleDecrement}> - </Button>
         <p className="initialNumber"> {count}</p>
-        <Button onClick={handleIncrement}> + </Button>
+        <Button onClick={handleIncrement}>+</Button>
       </div>
       <div className="buttonAdd">
-        <Button onClick={() => onAdd(count)}>
+        <Button onClick={onAddClickCount}>
           Agregar al
           <CartWidget />
         </Button>
