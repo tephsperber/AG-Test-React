@@ -20,10 +20,10 @@ const NavBar = () => {
             <Link to="/covid19">
               <li className="nav-link ">COVID-19</li>
             </Link>
-            <Link to="/precios">
+            <Link to="/prices">
               <li className="nav-link">Precios</li>
             </Link>
-            <Link to="/contacto">
+            <Link to="/contact">
               <li className="nav-link">Contacto</li>
             </Link>
             <div className="cartWidgetNav">
@@ -33,10 +33,10 @@ const NavBar = () => {
         </div>
         <div className="category">
           <p className="titleCategory">Categorías:</p>
-          <Link to="/inicio/CABA">
+          <Link to="/home/CABA">
             <li className="nav-link ">CABA</li>
           </Link>
-          <Link to="/inicio/GBA">
+          <Link to="/home/GBA">
             <li className="nav-link ">GBA</li>
           </Link>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import "./precios.css";
+import "./prices.css";
 
 const precios = () => {
   return (
