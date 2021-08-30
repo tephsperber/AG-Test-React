@@ -33,10 +33,10 @@ const NavBar = () => {
         </div>
         <div className="category">
           <p className="titleCategory">Categorías:</p>
-          <Link to="/category/CABA">
+          <Link to="/inicio/CABA">
             <li className="nav-link ">CABA</li>
           </Link>
-          <Link to="/category/GBA">
+          <Link to="/inicio/GBA">
             <li className="nav-link ">GBA</li>
           </Link>
         </div>

@@ -10,7 +10,6 @@ import Covid19 from "./views/covid19/covid19";
 import Precios from "./views/precios/precios";
 import Contacto from "./views/contacto/contacto";
 import Detail from "./views/detail/detail";
-import Category from "./views/category/category";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -24,7 +23,7 @@ const App = () => {
           <Route path="/covid19" component={Covid19}></Route>
           <Route path="/precios" component={Precios}></Route>
           <Route path="/contacto" component={Contacto}></Route>
-          <Route path="/category/:categoryId" component={Category}></Route>
+          <Route path="/inicio/:categoryId" component={Inicio}></Route>
           <Route path="/detail/:itemId" component={Detail}></Route>
         </Switch>
         <Footer />
