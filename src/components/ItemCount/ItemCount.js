@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./ItemCount.css";
-import { Button } from "semantic-ui-react";
-import CartWidget from "../CartWidget/CartWidget";
+import { Button, Icon } from "semantic-ui-react";
 
 function ItemCount({ stock, initial, onAdd }) {
   const [count, setCount] = useState(initial);
@@ -18,10 +17,10 @@ function ItemCount({ stock, initial, onAdd }) {
     }
   };
 
-  const onAddClickCount = () => {
+  const onAddCount = () => {
     onAdd(count);
+    setCount(1);
   };
-
   return (
     <div className="itemCount">
       <div className="button">
@@ -30,9 +29,9 @@ function ItemCount({ stock, initial, onAdd }) {
         <Button onClick={handleIncrement}>+</Button>
       </div>
       <div className="buttonAdd">
-        <Button onClick={onAddClickCount}>
+        <Button onClick={onAddCount}>
           Agregar al
-          <CartWidget />
+          <Icon name="cart" color="teal" size="large" className="iconCart" />
         </Button>
       </div>
       <p className="stockText">

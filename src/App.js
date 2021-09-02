@@ -13,22 +13,27 @@ import Detail from "./views/detail/detail";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import { CartProvider } from "./context/CartContext";
+
+//el componente provider envuelve la app para poder acceder al context desde donde queramos
 const App = () => {
   return (
-    <Router>
-      <div className="App">
-        <NavBar />
-        <Switch>
-          <Route path="/" exact component={Inicio}></Route>
-          <Route path="/covid19" component={Covid19}></Route>
-          <Route path="/prices" component={Precios}></Route>
-          <Route path="/contact" component={Contacto}></Route>
-          <Route path="/home/:categoryId" component={Inicio}></Route>
-          <Route path="/detail/:itemId" component={Detail}></Route>
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
+    <CartProvider>
+      <Router>
+        <div className="App">
+          <NavBar />
+          <Switch>
+            <Route path="/" exact component={Inicio}></Route>
+            <Route path="/covid19" component={Covid19}></Route>
+            <Route path="/prices" component={Precios}></Route>
+            <Route path="/contact" component={Contacto}></Route>
+            <Route path="/home/:categoryId" component={Inicio}></Route>
+            <Route path="/detail/:itemId" component={Detail}></Route>
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
+    </CartProvider>
   );
 };
 

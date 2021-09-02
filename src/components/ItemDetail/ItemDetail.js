@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ItemDetail.css";
 import { Card, Button } from "semantic-ui-react";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../context/CartContext";
 
 export function ItemDetail({ items }) {
-  const [onAdd, setOnAdd] = useState(0);
-
-  const onAddClickDetail = (quantityToAdd) => {
-    setOnAdd(quantityToAdd);
+  const { addToCart, removeItem, clear } = useCartContext();
+  const onAdd = (count) => {
+    addToCart(items, count);
   };
 
   return (
@@ -35,16 +35,17 @@ export function ItemDetail({ items }) {
         </div>
       </div>
       <div className="itemCount">
-        {onAdd ? (
-          <div>
-            <p> Has agregado {onAdd} test al carrito</p>
-            <Link to="/cart">
-              <Button>Termina tu compra</Button>
-            </Link>
-          </div>
-        ) : (
-          <ItemCount stock={items.stock} initial={1} onAdd={onAddClickDetail} />
-        )}
+        <div>
+          <p> Has agregado {onAdd} test al carrito</p>
+        </div>
+        <ItemCount stock={items.stock} initial={1} onAdd={onAdd} />
+        <div className="buttonsRemoveClear">
+          <Button onClick={removeItem}>Eliminar Test</Button>
+          <Button onClick={clear}>Vaciar Carrito</Button>
+        </div>
+        <Link to="/cart">
+          <Button>Termina tu compra</Button>
+        </Link>
       </div>
     </div>
   );

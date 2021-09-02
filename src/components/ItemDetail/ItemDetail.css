@@ -62,3 +62,7 @@
 .itemCount {
   font-weight: bold;
 }
+
+.buttonsRemoveClear {
+  padding: 20px;
+}
