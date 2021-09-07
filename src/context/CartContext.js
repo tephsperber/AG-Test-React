@@ -22,24 +22,52 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  const removeItem = (itemid) => {
+    const cartRemoved = cart.filter((item) => item.id !== itemid);
+    {
+      setCart(cartRemoved);
+    }
+  };
+
   const totalItems = cart.reduce((acc, item) => {
     return acc + item.quantity;
   }, 0);
 
-  const removeItem = (itemid) => {
-    setCart(cart.filter((elem) => elem.item.id !== itemid));
-  };
+  const totalPrice = cart.reduce((acc, item) => {
+    return acc + item.price * item.quantity;
+  }, 0);
+
+  const stockServer = cart.map((item) => {
+    return item.stock;
+  });
+
+  const quantity = cart.map((item) => {
+    return item.quantity;
+  });
+
+  const realStock = stockServer - quantity;
 
   const clear = () => setCart([]);
 
-  useEffect(() => {
-    localStorage.setItem("dataCart", JSON.stringify(cart));
-    console.log(JSON.parse(localStorage.getItem("dataCart")));
-  });
+  useEffect(
+    (cart) => {
+      localStorage.getItem("dataCart");
+      localStorage.setItem("dataCart", JSON.stringify(cart));
+    },
+    [cart]
+  );
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, totalItems, removeItem, clear }}
+      value={{
+        cart,
+        addToCart,
+        realStock,
+        totalItems,
+        totalPrice,
+        removeItem,
+        clear,
+      }}
     >
       {children}
     </CartContext.Provider>

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 
 export function ItemDetail({ items }) {
-  const { addToCart, removeItem, clear } = useCartContext();
+  const { addToCart, removeItem, clear, realStock } = useCartContext();
   const onAdd = (count) => {
     addToCart(items, count);
   };
@@ -38,12 +38,12 @@ export function ItemDetail({ items }) {
         <div>
           <p> Has agregado {onAdd} test al carrito</p>
         </div>
-        <ItemCount stock={items.stock} initial={1} onAdd={onAdd} />
+        <ItemCount stock={realStock} initial={1} onAdd={onAdd} />
         <div className="buttonsRemoveClear">
           <Button onClick={removeItem}>Eliminar Test</Button>
           <Button onClick={clear}>Vaciar Carrito</Button>
         </div>
-        <Link to="/cart">
+        <Link to="/cartview">
           <Button>Termina tu compra</Button>
         </Link>
       </div>

@@ -10,12 +10,12 @@ import Covid19 from "./views/covid19/covid19";
 import Precios from "./views/prices/prices";
 import Contacto from "./views/contact/contact";
 import Detail from "./views/detail/detail";
+import CartView from "./views/cartview/cartview";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import { CartProvider } from "./context/CartContext";
 
-//el componente provider envuelve la app para poder acceder al context desde donde queramos
 const App = () => {
   return (
     <CartProvider>
@@ -29,6 +29,7 @@ const App = () => {
             <Route path="/contact" component={Contacto}></Route>
             <Route path="/home/:categoryId" component={Inicio}></Route>
             <Route path="/detail/:itemId" component={Detail}></Route>
+            <Route path="/cartview" component={CartView}></Route>
           </Switch>
           <Footer />
         </div>
