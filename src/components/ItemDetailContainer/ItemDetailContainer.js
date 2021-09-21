@@ -33,8 +33,8 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-      {itemDetail.map(() => {
-        return <ItemDetail item={itemDetail} key={itemDetail.id} />;
+      {itemDetail.map((item) => {
+        return <ItemDetail item={item} key={item.id} />;
       })}
     </div>
   );

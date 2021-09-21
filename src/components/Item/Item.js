@@ -4,10 +4,6 @@ import { Link } from "react-router-dom";
 import "./Item.css";
 
 export const Item = ({ item }) => {
-  /* const { addToCart } = useCartContext();
-  const onAdd = (count) => {
-    addToCart(item, count);
-  }; */
   return (
     <div className="card">
       <Card>
