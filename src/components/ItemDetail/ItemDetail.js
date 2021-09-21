@@ -5,32 +5,32 @@ import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 
-export function ItemDetail({ items }) {
-  const { addToCart, removeItem, clear, realStock } = useCartContext();
+export function ItemDetail({ item }) {
+  const { addToCart, removeItem, clear } = useCartContext();
   const onAdd = (count) => {
-    addToCart(items, count);
+    addToCart(item, count);
   };
 
   return (
     <div className="centerItem">
       <div className="itemDetail">
         <div className="imgItem">
-          <img src={items.picture} alt="foto" />
+          <img src={item.picture} alt="foto" />
         </div>
         <div className="cardItemDetail">
-          <Card.Header className="cardHeaderItem">{items.title}</Card.Header>
+          <Card.Header className="cardHeaderItem">{item.title}</Card.Header>
           <Card.Description className="cardDescriptionItem">
-            {items.description}
+            {item.description}
           </Card.Description>
           <Card.Description className="cardDescriptionItem">
-            {items.certificate}
+            {item.certificate}
           </Card.Description>
           <Card.Description className="cardDescriptionItem">
             Precio correspondiente a domicilio dentro de
-            <span className="spanItem"> {items.location}</span> .
+            <span className="spanItem"> {item.location}</span> .
           </Card.Description>
           <Card.Meta className="cardPriceItem">
-            <div className="textPrice">${items.price}</div>
+            <div className="textPrice">${item.price}</div>
           </Card.Meta>
         </div>
       </div>
@@ -38,7 +38,7 @@ export function ItemDetail({ items }) {
         <div>
           <p> Has agregado {onAdd} test al carrito</p>
         </div>
-        <ItemCount stock={realStock} initial={1} onAdd={onAdd} />
+        <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
         <div className="buttonsRemoveClear">
           <Button onClick={removeItem}>Eliminar Test</Button>
           <Button onClick={clear}>Vaciar Carrito</Button>

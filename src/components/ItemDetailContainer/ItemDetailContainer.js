@@ -1,33 +1,51 @@
 import React, { useState, useEffect } from "react";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
-import productsArray from "../../utils/products";
-import { useParams } from "react-router-dom";
+import { db } from "../../firebase";
 
-function ItemDetailContainer() {
-  const [items, setItems] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const { itemId } = useParams();
+const ItemDetailContainer = () => {
+  const [productsDetail, setProductsDetail] = useState([]);
+
+  console.log("PRODUCTOS", productsDetail);
+
+  const getProducts = () => {
+    db.collection("products").onSnapshot((querySnapshot) => {
+      const docs = [];
+      querySnapshot.forEach((doc) => {
+        docs.push({ ...doc.data(), id: doc.id });
+      });
+      setProductsDetail(docs);
+    });
+  };
+
+  const getProduct = () => {
+    db.collection("products").onSnapshot((querySnapshot) => {
+      const docs = [];
+      querySnapshot.forEach((doc) => {
+        docs.push({ ...doc.data(), id: doc.id });
+      });
+      const filteredProduct = docs.filter((product) => {
+        return product.id === "LroK6ifuWU0ipuGP7Oyc";
+      });
+
+      console.log(filteredProduct);
+
+      setProductsDetail(filteredProduct);
+    });
+  };
 
   useEffect(() => {
-    const myPromise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const productFound = productsArray.find(
-          (product) => product.id === +itemId
-        );
-        resolve(productFound);
-      }, 2000);
-    });
+    getProduct();
 
-    myPromise
-      .then((productsArray) => {
-        setItems(productsArray);
-      })
-      .finally(() => setLoading(false));
-  }, [itemId]);
+    getProducts();
+  }, []);
 
-  if (loading) return <h1>Loading</h1>;
-
-  return <ItemDetail items={items} />;
-}
+  return (
+    <div>
+      {productsDetail.map((item) => {
+        return <ItemDetail item={productsDetail} key={productsDetail.id} />;
+      })}
+    </div>
+  );
+};
 
 export default ItemDetailContainer;
