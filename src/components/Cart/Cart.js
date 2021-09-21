@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "semantic-ui-react";
+import { Button, Image } from "semantic-ui-react";
 import { useCartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import "./Cart.css";
@@ -14,6 +14,8 @@ const CartItem = () => {
           {cart.map((cartElement) => {
             return (
               <div className="itemsCart">
+                <Image className="img" src={cartElement.img} />
+
                 <p className="testNameCart">{cartElement.description}</p>
                 <p> Precio por Test: ${cartElement.price}</p>
                 <p> Cantidad seleccionada: {cartElement.quantity}</p>

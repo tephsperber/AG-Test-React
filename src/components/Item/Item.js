@@ -9,7 +9,7 @@ export const Item = ({ item }) => {
       <Card>
         <div className="centerText">
           <Card.Content>
-            <Link to={`/detail/${item.id}`}>
+            <Link to={`/item/${item.id}`}>
               <Card.Header className="cardHeader">{item.title}</Card.Header>
               <Card.Meta>{item.description}</Card.Meta>
               <Image className="img" src={item.img} />

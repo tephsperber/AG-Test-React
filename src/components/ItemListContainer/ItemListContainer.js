@@ -14,7 +14,7 @@ const ItemListContainer = () => {
     getFilteredItems(categoryId).finally(() => setLoading(false));
   }, [categoryId]);
 
-  const queryBuilder = (category, id) => {
+  const queryBuilder = (category) => {
     if (category) {
       return query(
         collection(db, "products"),

@@ -7,7 +7,8 @@ import Inicio from "./views/home/home";
 import Covid19 from "./views/covid19/covid19";
 import Precios from "./views/prices/prices";
 import Contacto from "./views/contact/contact";
-import Detail from "./views/detail/detail";
+import Item from "./views/item/item";
+import Category from "./views/category/category";
 import CartView from "./views/cartview/cartview";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
@@ -23,8 +24,8 @@ const App = () => {
             <Route path="/covid19" component={Covid19}></Route>
             <Route path="/prices" component={Precios}></Route>
             <Route path="/contact" component={Contacto}></Route>
-            <Route path="/home/:categoryId" component={Inicio}></Route>
-            <Route path="/detail/:itemId" component={Detail}></Route>
+            <Route path="/category/:categoryId" component={Category} />
+            <Route path="/item/:itemId" component={Item}></Route>
             <Route path="/cartview" component={CartView}></Route>
           </Switch>
           <Footer />

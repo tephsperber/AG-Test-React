@@ -1,8 +1,8 @@
 import React from "react";
 import ItemDetailContainer from "../../components/ItemDetailContainer/ItemDetailContainer";
 
-const detail = () => {
+const item = () => {
   return <ItemDetailContainer />;
 };
 
-export default detail;
+export default item;

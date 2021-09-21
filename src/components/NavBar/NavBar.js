@@ -33,10 +33,10 @@ export const NavBar = () => {
         </div>
         <div className="category">
           <p className="titleCategory">Categorías:</p>
-          <Link to="/home/CABA">
+          <Link to="/category/CABA">
             <li className="nav-link ">CABA</li>
           </Link>
-          <Link to="/home/GBA">
+          <Link to="/category/GBA">
             <li className="nav-link ">GBA</li>
           </Link>
         </div>
