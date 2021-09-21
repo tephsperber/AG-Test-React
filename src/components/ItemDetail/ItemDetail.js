@@ -15,7 +15,7 @@ export function ItemDetail({ item }) {
     <div className="centerItem">
       <div className="itemDetail">
         <div className="imgItem">
-          <img src={item.picture} alt="foto" />
+          <img src={item.img} alt="foto" />
         </div>
         <div className="cardItemDetail">
           <Card.Header className="cardHeaderItem">{item.title}</Card.Header>
