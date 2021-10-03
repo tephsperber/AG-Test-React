@@ -11,21 +11,21 @@ const ItemListContainer = () => {
   const { categoryId } = useParams();
 
   useEffect(() => {
-    getFilteredItems(categoryId).finally(() => setLoading(false));
-  }, [categoryId]);
+    getItemFiltered(categoryId).finally(() => setLoading(false));
+  });
 
-  const queryBuilder = (category) => {
+  const queryBuilder = (category, id) => {
     if (category) {
       return query(
         collection(db, "products"),
-        where("categoryId", "==", category.toLowerCase())
+        where("category", "==", category)
       );
     } else {
       return query(collection(db, "products"));
     }
   };
 
-  const getFilteredItems = async (category) => {
+  const getItemFiltered = async (category) => {
     const docs = [];
     const q = queryBuilder(category);
     const querySnapshot = await getDocs(q);
@@ -43,4 +43,5 @@ const ItemListContainer = () => {
     </div>
   );
 };
+
 export default ItemListContainer;

@@ -10,7 +10,9 @@ export const Item = ({ item }) => {
         <div className="centerText">
           <Card.Content>
             <Link to={`/item/${item.id}`}>
-              <Card.Header className="cardHeader">{item.title}</Card.Header>
+              <Card.Header className="cardHeader">
+                {item.title} {item.category}
+              </Card.Header>
               <Card.Meta>{item.description}</Card.Meta>
               <Image className="img" src={item.img} />
               <div className="precio">

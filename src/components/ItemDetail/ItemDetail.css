@@ -8,9 +8,10 @@
   box-shadow: inset 0.3em 0.3em 1em rgba(0, 0, 0, 0.3),
     0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white;
   padding: 30px;
+  height: 500px;
 }
 
-.centerItem {
+.grid {
   display: grid;
   justify-content: center;
 }
@@ -18,19 +19,23 @@
 .imgItem {
   display: flex;
   justify-content: center;
-  height: auto;
+  height: 400px;
   float: left;
+}
+img {
+  width: 700px;
 }
 
 .cardItemDetail {
   justify-content: center;
-  height: auto;
   float: right;
+  margin: auto;
+  padding: 20px;
 }
 
 .cardHeaderItem {
-  text-align: center;
-  padding: 30px;
+  text-align: left;
+  padding-bottom: 30px;
   font-size: 30px;
   text-transform: uppercase;
   color: #11a99d;
@@ -39,11 +44,18 @@
 .cardDescriptionItem {
   text-align: left;
   padding: 10px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
+.cardTitleItem {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+}
 .cardPriceItem {
-  padding-top: 20px;
+  padding: 20px;
   font-size: 30px;
   display: flex;
   justify-content: center;
@@ -51,11 +63,10 @@
 .textPrice {
   border: 5px solid lightgrey;
   width: auto;
-  padding: 20px;
+  padding: 10px;
 }
 
 .spanItem {
-  text-decoration: underline;
   font-weight: bold;
 }
 
@@ -63,6 +74,20 @@
   font-weight: bold;
 }
 
-.buttonsRemoveClear {
+.added {
+  text-align: center;
+  justify-content: center;
+  -webkit-box-shadow: inset 0.3em 0.3em 1em rgba(0, 0, 0, 0.3),
+    0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white;
+  box-shadow: inset 0.3em 0.3em 1em rgba(0, 0, 0, 0.3),
+    0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white;
   padding: 20px;
+  float: right;
+  width: 40%;
+}
+
+.buttonsDetail {
+  padding-top: 20px;
+  text-align: center;
+  justify-content: center;
 }

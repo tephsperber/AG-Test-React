@@ -32,4 +32,6 @@
 }
 .buttonAdd {
   padding-bottom: 20px;
+  display: inline;
+  padding-left: 50px;
 }

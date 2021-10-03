@@ -17,8 +17,8 @@ export const NavBar = () => {
             <Link to="/">
               <li className="nav-link ">Inicio</li>
             </Link>
-            <Link to="/covid19">
-              <li className="nav-link ">COVID-19</li>
+            <Link to="/information">
+              <li className="nav-link ">Información</li>
             </Link>
             <Link to="/prices">
               <li className="nav-link">Precios</li>

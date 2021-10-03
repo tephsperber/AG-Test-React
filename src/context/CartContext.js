@@ -24,9 +24,7 @@ export const CartProvider = ({ children }) => {
 
   const removeItem = (itemid) => {
     const cartRemoved = cart.filter((item) => item.id !== itemid);
-    {
-      setCart(cartRemoved);
-    }
+    setCart(cartRemoved);
   };
 
   const totalItems = cart.reduce((acc, item) => {
@@ -37,15 +35,11 @@ export const CartProvider = ({ children }) => {
     return acc + item.price * item.quantity;
   }, 0);
 
-  const stockServer = cart.map((item) => {
+  const realStock = (item) => {
+    const itemFound = cart.find((e) => item.id === e.id);
+    if (itemFound) return item.stock - itemFound.quantity;
     return item.stock;
-  });
-
-  const quantity = cart.map((item) => {
-    return item.quantity;
-  });
-
-  const realStock = stockServer - quantity;
+  };
 
   const clear = () => setCart([]);
 

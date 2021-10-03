@@ -8,18 +8,27 @@ const CartItem = () => {
   const { cart, removeItem, clear, totalItems, totalPrice } = useCartContext();
 
   return (
-    <div>
+    <div className="grid">
       {totalItems ? (
         <div>
           {cart.map((cartElement) => {
             return (
               <div className="itemsCart">
                 <Image className="img" src={cartElement.img} />
-
                 <p className="testNameCart">{cartElement.description}</p>
-                <p> Precio por Test: ${cartElement.price}</p>
-                <p> Cantidad seleccionada: {cartElement.quantity}</p>
-                <p>Precio Total: ${cartElement.price * cartElement.quantity}</p>
+                <div className="alignLeft">
+                  <p>
+                    <span> Precio por Test:</span> ${cartElement.price}
+                  </p>
+                  <p>
+                    <span>Cantidad seleccionada: </span>
+                    {cartElement.quantity}
+                  </p>
+                  <p>
+                    <span>Precio Total:</span> $
+                    {cartElement.price * cartElement.quantity}
+                  </p>
+                </div>
 
                 <Button
                   basic
@@ -31,10 +40,10 @@ const CartItem = () => {
               </div>
             );
           })}
-          <div className="seleccion">
+          <div className="selection">
             <p>
               Has seleccionado un total de
-              <span className="spanCart">{totalItems}</span> Tests
+              <span className="spanCart">{totalItems}</span>Test.
             </p>
             <p>
               El monto total es de $
@@ -42,10 +51,14 @@ const CartItem = () => {
             </p>
           </div>
           <div className="buttonsCart">
-            <Button color="red" onClick={clear}>
+            <Button color="red" size="large" onClick={clear}>
               Vaciar Carrito
             </Button>
-            <Button color="green">Iniciar Compra</Button>
+            <Link to="/checkOut">
+              <Button color="green" size="large">
+                Iniciar Compra
+              </Button>
+            </Link>
           </div>
         </div>
       ) : (
