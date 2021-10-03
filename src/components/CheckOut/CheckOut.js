@@ -191,12 +191,12 @@ const CheckOut = () => {
               </p>
 
               <div>
-                <Button color="teal" onClick={addProduct}>
-                  Iniciar Compra
-                </Button>
                 <Link to="/cartview">
                   <Button color="black">Volver al Carrito </Button>
                 </Link>
+                <Button color="teal" onClick={addProduct}>
+                  Iniciar Compra
+                </Button>
               </div>
             </form>
           </div>
